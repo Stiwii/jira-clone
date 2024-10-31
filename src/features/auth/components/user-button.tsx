@@ -56,7 +56,7 @@ export const UserButton = () => {
               {avatarFallback}
             </AvatarFallback>
           </Avatar>
-          <div className="flex felx-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
             <p className="text-sm font-medium text-neutral-900 ">
               {name || "User"}
             </p>
