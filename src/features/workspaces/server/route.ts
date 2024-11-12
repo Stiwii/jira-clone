@@ -38,7 +38,7 @@ const app = new Hono()
     const workspaces = await databases.listDocuments(
       DATABASE_ID,
       WORKSPACES_ID,
-      [Query.equal("$id", workspaceIds)]
+      [Query.equal("$id", workspaceIds), Query.orderDesc("$createdAt")]
     );
 
     return c.json({ data: workspaces });
