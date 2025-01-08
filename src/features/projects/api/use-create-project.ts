@@ -25,9 +25,8 @@ export const useCreateProject = () => {
       toast.success("Project created successfully");
       queryClient.invalidateQueries({ queryKey: ["projects"] });
     },
-    onError: (error) => {
-      console.log(error);
-      toast.error("Failed to create project 2");
+    onError: () => {
+      toast.error("Failed to create project");
     },
   });
   return mutation;
