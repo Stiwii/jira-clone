@@ -27,11 +27,11 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { createProjectSchema } from "../schemas";
 import { useCreateProject } from "../api/use-create-project";
 
-interface CreateWorkspaceFormProps {
+interface CreateProjectFormProps {
   onCancel?: () => void;
 }
 
-export const CreateProjectForm = ({ onCancel }: CreateWorkspaceFormProps) => {
+export const CreateProjectForm = ({ onCancel }: CreateProjectFormProps) => {
   const workspaceId = useWorkspaceId();
   const router = useRouter();
   const { mutate, isPending } = useCreateProject();

@@ -6,7 +6,6 @@ import { getCurrent } from "@/features/auth/queries";
 import { getProject } from "@/features/projects/queries";
 import { ProjectAvatar } from "@/features/projects/components/project-avatar";
 import { Button } from "@/components/ui/button";
-import { FaTasks } from "react-icons/fa";
 import { TaskViewSwitcher } from "@/features/tasks/components/task-view-switcher";
 
 interface ProjectIdPageProps {
@@ -25,6 +24,7 @@ const ProjectIdPage = async ({ params }: ProjectIdPageProps) => {
   const initialValues = await getProject({
     projectId: params.projectId,
   });
+  
   if (!initialValues) {
     throw new Error("Project not found");
   }
